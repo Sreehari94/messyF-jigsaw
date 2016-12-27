@@ -1,0 +1,75 @@
+  html body
+  {
+    background-color: aliceblue
+  }
+  #collage
+  {
+    background-color: aliceblue;
+  }
+  #collage #sortable {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+   
+}
+.footer
+{
+   
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+    #collage #sortable li {
+        background-size: 400% 400%;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        float: left;
+        
+    }
+
+    @media only screen and (max-width : 320px) {
+       
+       .outerJigsawDiv
+       {
+         width: 270px;
+         height:270px;
+      
+        
+       }
+
+ }
+
+ @media only screen and (min-width : 360px) and (max-width: 769px) {
+       
+       .outerJigsawDiv
+       {
+         width: 291px;
+        height: 291px;
+       
+       
+       }
+
+ }
+@media only screen and (min-width :770px) {
+       
+       .outerJigsawDiv
+       {
+         width:435px;
+        height:435px;
+       
+       
+       }
+
+ }
+
+
+
+
+
+
