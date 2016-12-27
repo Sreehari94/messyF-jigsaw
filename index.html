@@ -12,60 +12,57 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="lib/jquery/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="app/css/JGS_Style.css">
   
 </head>
 
 <body>
-
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">Pro Jigsaw</a>
       </div>
       <!--/.nav-collapse -->
     </div>
   </nav>
 
   <div ng-app="JigsawApp">
-      <ui-view></ui-view>
-
-
-    <script type="text/ng-template" id="/jigsaw_puzzle.html">
-      <div class="jumbotron">
-        <div class="container">
-          <h1>Hello, puzzle!</h1>
-          <p>Click the button</p>
-          <p><a class="btn btn-primary btn-lg" ui-sref="solution" role="button">Learn more</a></p>
-        </div>
-      </div>
-    </script>
-
-  <script type="text/ng-template" id="/jigsaw_solution.html">
-      <div class="container ">
-        <div class="col-md-6">
-          <div id="blockRotate" name="blockRotate">
-            
-          </div>  
-        </div>
-      </div>
-    
-    
-
-  </script>
-
+    <ui-view></ui-view>
+    <div class="footer"><span style="color:white">@Copyright <a target=_blank href="http://sparrowzapp.com">sparrowzapp.com</a></span></div>
   </div>
 
   <!-- /.container -->
 
 
   <!-- script src="lib/bootstrap-3.3.7/js/bootstrap.min.js" ></script -->
+  <!--Jquery libs-->
+  <script src="lib/jquery/jquery-2.2.3.js"></script>
+  <script src="lib/jquery/jquery.ui.1.11.2.js"></script>
+  <script src="lib/jquery/jquery_touch_pounch.js"></script>
+  <script src="lib/jquery/jQuery_JGS_Puzzle.js"></script>
   <script src="lib/three/three.js" ></script>
   <script src="lib/angular-1.6.1/angular.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
   <script src="app/app.js" ></script>
-
+  <script src="data/players.js" ></script>
 
 
 </body>
-
-
+<script>
+  function draw (){
+  console.log("DOM is ready Now");
+  console.log('inside canvas draw fn');
+   var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  var img = document.getElementById("dummyImage");
+  console.log('img element:',img);
+  ctx.drawImage(img, 0,0, 400, 400);
+  $('#actualImage').attr('src', canvas.toDataURL("image/jpeg"));
+        var gridSize = 3;
+        console.log("grid sizes are :-" , gridSize);
+        imagePuzzle.startGame(gridSize);
+    }
+ </script>

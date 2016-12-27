@@ -4,32 +4,67 @@ angular
 	.config(function($stateProvider, $urlRouterProvider)
 	{
 		$stateProvider
-			.state('puzzle', {
-				name: 'puzzle',
-				url: '/puzzle',
-				controller: 'PuzzleController',
-				templateUrl: '/jigsaw_puzzle.html'
+			.state('app', {
+				abstract: true,
+				name: 'app',
+				url: '/app',
+				controller: 'AppController',
+				templateUrl: 'app/templates/app.html'
 			})
 
-			.state('solution', {
+			.state('app.puzzle', {
+				name: 'puzzle',
+				url: '/puzzle/:playerId',
+				controller: 'PuzzleController',
+				templateUrl: 'app/templates/jigsaw_puzzle.html'
+			})
+
+			.state('app.solution', {
 				name: 'solution',
-				url: '/solution',
+				url: '/solution/:playerId',
 				controller: 'SolutionController',
-				templateUrl: '/jigsaw_solution.html'
+				templateUrl: 'app/templates/jigsaw_solution.html'
 			});
 		// if none of the above states are matched, use this as the fallback
-  		$urlRouterProvider.otherwise('/puzzle');
+  		$urlRouterProvider.otherwise('/app/puzzle/');
 	})
 
-	.controller('PuzzleController', function( $scope, $window, $state ){
-		console.log("Inside PuzzleController.")
+	.controller('AppController', function( $scope, $window, $state ){
+		console.log("Inside AppController.")
 	})
 
-	.controller('SolutionController', function( $scope, $window, $state ){
+	.controller('PuzzleController', function( $scope, $window, $state, $stateParams ){
+		console.log("Inside PuzzleController.");
+		$scope.puzzleData={};
+
+		var playerId="jwala";
+
+		if($stateParams.playerId){
+			playerId=$stateParams.playerId;
+		}
+
+		$scope.puzzleData.playerData = players[playerId];
+
+		console.log(">>>>>>>>>>>>>"+$scope.puzzleData)
+	})
+
+	.controller('SolutionController', function( $scope, $window, $state, $stateParams ){
 		console.log("Inside SolutionController.");
+
+		$scope.solutionData={};
 
 		var camera, scene, renderer;
 		var mesh;
+		var playerId="jwala";
+
+		if($stateParams.playerId){
+			playerId=$stateParams.playerId;
+		}
+
+		$scope.solutionData.playerData = players[playerId];
+
+
+		console.log('>>>>>>'+JSON.stringify($scope.solutionData.playerData))
 		
 		init();
 		animate();
@@ -38,14 +73,16 @@ angular
 	        camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
 	        camera.position.z = 400;
 	        scene = new THREE.Scene();
-	        var texture = new THREE.TextureLoader().load( 'assets/images/puneri_manjit.png' );
+	        //scene.background = new THREE.Color( 0xffffff );
+	        var texture = new THREE.TextureLoader().load( $scope.solutionData.playerData.photo );
 	        var geometry = new THREE.BoxBufferGeometry( 200, 200, 200 );
 	        var material = new THREE.MeshBasicMaterial( { map: texture } );
 	        mesh = new THREE.Mesh( geometry, material );
 	        scene.add( mesh );
-	        renderer = new THREE.WebGLRenderer();
+	        renderer = new THREE.WebGLRenderer({ alpha: true });
 	        renderer.setPixelRatio( window.devicePixelRatio );
-	        renderer.setSize( window.innerWidth, window.innerHeight );
+	        //renderer.setSize( window.innerWidth, window.innerHeight );
+	        renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
 	        document.getElementById("blockRotate").appendChild( renderer.domElement );
 	        //
 	        window.addEventListener( 'resize', onWindowResize, false );
