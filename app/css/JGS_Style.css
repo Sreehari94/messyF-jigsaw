@@ -1,16 +1,41 @@
   html body
   {
-    background-color: aliceblue
+    background-color: antiquewhite;
+  }
+  #solutionName
+  {
+     color:grey;
+     font-family: serif;
+  }
+  .btn-replay
+  {
+    float:right !important;
+  }
+
+  .outerJigsawDiv
+  {
+    margin-top: 60px;
+  }
+  .jigsawHeaderRow
+  {
+        margin-top: 51px;
+        background-color:lightcoral;
   }
   #collage
   {
-    background-color: aliceblue;
+    margin-top: 52px;
   }
   #collage #sortable {
     list-style-type: none;
     display: inline-block;
     padding: 0;
    
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid rosybrown;
 }
 .footer
 {
@@ -22,8 +47,7 @@
     width: 100%;
     text-align: center;
 }
-
-    #collage #sortable li {
+ #collage #sortable li {
         background-size: 400% 400%;
         border: none;
         cursor: pointer;
@@ -42,6 +66,7 @@
       
         
        }
+       
 
  }
 
@@ -49,22 +74,27 @@
        
        .outerJigsawDiv
        {
-         width: 291px;
-        height: 291px;
+         width:320px;
+        height: 320px;
        
        
        }
-
+       
  }
 @media only screen and (min-width :770px) {
        
        .outerJigsawDiv
        {
-         width:435px;
-        height:435px;
+         width:350px;
+        height:350px;
        
        
        }
+       canvas{
+          width:1000px;
+          height:1000px;
+       }
+       
 
  }
 

@@ -42,10 +42,14 @@ angular
 		if($stateParams.playerId){
 			playerId=$stateParams.playerId;
 		}
+		console.log("puzzle Data:-",$scope.puzzleData);
 
 		$scope.puzzleData.playerData = players[playerId];
-
-		console.log(">>>>>>>>>>>>>"+$scope.puzzleData)
+		$scope.isJigsawCompleteStatus=function()
+		{
+			console.log("jigsaw completed status:-",status);
+			 $state.go('app.solution',{playerId: $scope.puzzleData.playerData.id});
+		}
 	})
 
 	.controller('SolutionController', function( $scope, $window, $state, $stateParams ){
@@ -100,5 +104,11 @@ angular
 	        renderer.render( scene, camera );
 	      }
 
-	})
-;
+	      $scope.playAgain=function(puzzleId)
+	      {
+	      	console.log("request to play Again with id:-",puzzleId);
+	      	$state.go('app.puzzle',{playerId:puzzleId})
+
+	      }
+
+	});

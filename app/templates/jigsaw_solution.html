@@ -1,15 +1,24 @@
-<div class="container ">
-<div class="row"></div>
-	<div class="row">
-		<h1>Manjit Singh</h1>
+<div class="row jigsawHeaderRow">
+		<center><h4>Manjit Singh</h4></center>
 	</div>
+<div class="container">
 	<div class="row">
+			<div class="col col-md-6 col-xs-6"><span id="solutionName">{{solutionData.playerData.name}}</span></div>
+			<div class="col col-md-6 col-xs-6">
+				<button type="button" class="btn btn-warning btn-replay" ng-click="playAgain(solutionData.playerData.id)">Play Again</button>
+			</div>
+	</div>
+<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-		  <div id="blockRotate" name="blockRotate">
+		  <div name="blockRotate">
+		  	<center id="blockRotate"></center>
 		  </div>  
 		</div>
 	</div>
 	<div class="row">
-		<h1>{{solutionData.playerData.name}}</h1>
+		
+		
+		
+
 	</div>
 </div>
