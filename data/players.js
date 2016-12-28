@@ -1,13 +1,13 @@
 var players = {
-      "Akshay" : {
-            id : "Akshay",
+      "akshay" : {
+            id : "akshay",
             name : "Akshay Dewalkar",
             photo : "data/images/dAcers/Dewalkar.png",
             team: "Delhi Acers"
       },
 
-      "Akshay1" : {
-            id : "Akshay1",
+      "akshay1" : {
+            id : "akshay1",
             name : "Akshay Dewalkar",
             photo : "data/images/dAcers/Dewalkar-1.jpg",
             team: "Delhi Acers"
@@ -34,66 +34,66 @@ var players = {
             team: "Delhi Acers"
       },
 
-      "Jorgensen1" : {
-            id : "Jorgensen1",
+      "jorgensen1" : {
+            id : "jorgensen1",
             name : "Jan O Jorgensen",
             photo : "data/images/dAcers/Jorgensen-1.jpg",
             team: "Delhi Acers"
       },
 
-      "Jorgensen2" : {
-            id : "Jorgensen2",
+      "jorgensen2" : {
+            id : "jorgensen2",
             name : "Jan O Jorgensen",
             photo : "data/images/dAcers/Jorgensen-2.jpg",
             team: "Delhi Acers"
       },
 
-      "Jorgensen3" : {
-            id : "Jorgensen3",
+      "jorgensen3" : {
+            id : "jorgensen3",
             name : "Jan O Jorgensen",
             photo : "data/images/dAcers/Jorgensen-3.png",
             team: "Delhi Acers"
       },
 
-      "Jwala" : {
-            id : "Jwala",
+      "jwala" : {
+            id : "jwala",
             name : "Jwala Gutta",
             photo : "data/images/dAcers/Jwala-Gutta.png",
             team: "Delhi Acers"
       },
 
-      "Jwala1" : {
-            id : "Jwala1",
+      "jwala1" : {
+            id : "jwala1",
             name : "Jwala Gutta",
             photo : "data/images/dAcers/Jwala-Gutta-1.jpg",
             team: "Delhi Acers"
       },
 
-      "Jwala2" : {
-            id : "Jwala2",
+      "jwala2" : {
+            id : "jwala2",
             name : "Jwala Gutta",
             photo : "data/images/dAcers/Jwala-Gutta-2.jpg",
             team: "Delhi Acers"
       },
 
-      "Nichaon1" : {
-            id : "Nichaon1",
+      "nichaon1" : {
+            id : "nichaon1",
             name : "Nichaon Jindapon",
             photo : "data/images/dAcers/Nichaon-1.jpg",
             team: "Delhi Acers"
 
       },
 
-      "Nichaon2" : {
-            id : "Nichaon2",
+      "nichaon2" : {
+            id : "nichaon2",
             name : "Nichaon Jindapon",
             photo : "data/images/dAcers/Nichaon-2.png",
             team: "Delhi Acers"
 
       },
 
-      "Nichaon3" : {
-            id : "Nichaon3",
+      "nichaon3" : {
+            id : "nichaon3",
             name : "Nichaon Jindapon",
             photo : "data/images/dAcers/Nichaon-3.png",
             team: "Delhi Acers"
@@ -101,15 +101,15 @@ var players = {
       },
 
 
-      "Siril1" : {
-            id : "Siril1",
+      "siril1" : {
+            id : "siril1",
             name : "Siril Verma",
             photo : "data/images/dAcers/Siril-1.jpg",
             team: "Delhi Acers"
       },
 
-      "Siril2" : {
-            id : "Siril2",
+      "siril2" : {
+            id : "siril2",
             name : "Siril Verma",
             photo : "data/images/dAcers/Siril.png",
             team: "Delhi Acers"
