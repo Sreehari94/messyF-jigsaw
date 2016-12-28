@@ -20,6 +20,16 @@
 </head>
 
 <body>
+  <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-77455759-6', 'auto');
+ ga('send', 'pageview');
+
+</script>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container navBarJigsaw">
       <div class="navbar-header">
@@ -34,8 +44,8 @@
     
     <ui-view></ui-view>
     <div class="footer">
-      <span style="color:white">@copyright <a target=_blank href="http://sparrowzapp.com">sparrowzapp.com</a></span><br>
-      <span style="color:white">Want to play an exciting treasure hunt in Cubbon Park, Bangalore?<br> <a href="http://www.sparrowzapp.com/events.html">Buy tickets here</a></span>
+      <span style="color:white">@copyright <a id="link">sparrowzapp.com</a></span><br>
+      <span style="color:white">Want to play an exciting treasure hunt in Cubbon Park, Bangalore?<br> <a id="buyTickets">Buy tickets here</a></span>
     </div>
   </div>
 

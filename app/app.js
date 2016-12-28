@@ -30,11 +30,42 @@ angular
 	})
 
 	.controller('AppController', function( $scope, $window, $state ){
-		console.log("Inside AppController.")
+		console.log("Inside AppController.");
+		$('#link').click(function(){ $scope.openSparrowzappLink(); return false; });
+		$('#buyTickets').click(function(){ $scope.buyTicketLink(); return false; });
+
+		$scope.openSparrowzappLink=function(link)
+		{
+			 console.log("opening link");
+			 	ga('send', {
+                hitType: 'event',
+                eventCategory: 'jigsaw',
+                eventAction:'User cliked on sparrowzapp.com'  ,
+                eventLabel: 'USER_CLICKED_SPARROWZ_WEBSITE',
+                eventValue: 0
+            });
+			 $window.open('http://sparrowzapp.com', '_blank');
+		}
+		$scope.buyTicketLink=function()
+		{
+			console.log("opening buy ticket link");
+			 console.log("opening link");
+			 	ga('send', {
+                hitType: 'event',
+                eventCategory: 'jigsaw',
+                eventAction:'User clicked on sparrowzapp.com/events.html'  ,
+                eventLabel: 'USER_CLIKED_SPARROWZ_EVENT',
+                eventValue: 0
+            });
+			 $window.open('http://www.sparrowzapp.com/events.html', '_blank');
+
+		}
 	})
 
 	.controller('PuzzleController', function( $scope, $window, $state, $stateParams ){
 		console.log("Inside PuzzleController.");
+  
+		
 		$scope.puzzleData={};
 
 		var playerId="jwala";
@@ -48,14 +79,29 @@ angular
 		$scope.isJigsawCompleteStatus=function()
 		{
 			console.log("jigsaw completed status:-",status);
+			ga('send', {
+                hitType: 'event',
+                eventCategory: 'Jigsaw',
+                eventAction: 'Puzzle completed Successfully for image' +JSON.stringify($scope.puzzleData.playerData),
+                eventLabel: 'PUZZLE_COMPLETED_SUCCESSFULLY',
+                eventValue: 0
+            });
 			 $state.go('app.solution',{playerId: $scope.puzzleData.playerData.id});
 		}
+		ga('send', {
+                hitType: 'event',
+                eventCategory: 'Jigsaw',
+                eventAction: 'Puzzle loaded with image'+JSON.stringify($scope.puzzleData.playerData),
+                eventLabel: 'PUZZLE_LOADED_SUCCESSFULLY',
+                eventValue: 0
+            });
 	})
 
 	.controller('SolutionController', function( $scope, $window, $state, $stateParams ){
 		console.log("Inside SolutionController.");
 
 		$scope.solutionData={};
+		
 
 		var camera, scene, renderer;
 		var mesh;
@@ -104,11 +150,20 @@ angular
 	        renderer.render( scene, camera );
 	      }
 
-	      $scope.playAgain=function(puzzleId)
+	      $scope.playAgain=function(solutionDataValue)
 	      {
-	      	console.log("request to play Again with id:-",puzzleId);
-	      	$state.go('app.puzzle',{playerId:puzzleId})
+	      	console.log("request to play Again with id:-",solutionDataValue);
+	      	ga('send', {
+                hitType: 'event',
+                eventCategory: 'puzzle Game',
+                eventAction: 'Replay jigsaw with ' + JSON.stringify(solutionDataValue) ,
+                eventLabel: 'REPLAY_JIGSAW',
+                eventValue: 0
+            });
+
+	      	$state.go('app.puzzle',{playerId:solutionDataValue.id})
 
 	      }
+
 
 	});
