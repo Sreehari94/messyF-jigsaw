@@ -1,33 +1,58 @@
-  html body
-  {
-    background-color: aliceblue
-  }
+html body
+{
+
+height: 100%;
+overflow: hidden;
+width: 100%;
+position: fixed;
+
+}
   #collage
   {
     background-color: aliceblue;
+    margin-top:65px;
   }
-  .jigsawHeaderRow{
-    margin-top: 51px;
-    background-color: goldenrod;
-
-  }
-
  
+.navBarJigsaw
+{
+  background-color:goldenrod!important;
+  width:100%;
+}
+ 
+ .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a
+ {
+   color:white!important;
+   
+ }
+ .navbar-inverse
+ {
+   border-color:goldenrod!important;
+ }
   #collage #sortable {
     list-style-type: none;
     display: inline-block;
     padding: 0;
    
 }
+#blockRotate
+{
+   background-color: transparent;
+}
+
 .footer
 {
    
     position: absolute;
     bottom: 0px;
-    background-color: black;
+    background-color:black;
     height: 100px;
     width: 100%;
     text-align: center;
+}
+canvas
+{
+  margin-top: 52px;
+  background-color: transparent;
 }
 
     #collage #sortable li {
@@ -46,6 +71,7 @@
        {
          width: 270px;
          height:270px;
+
       
         
        }
