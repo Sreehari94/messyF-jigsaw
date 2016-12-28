@@ -1,41 +1,23 @@
   html body
   {
-    background-color: antiquewhite;
-  }
-  #solutionName
-  {
-     color:grey;
-     font-family: serif;
-  }
-  .btn-replay
-  {
-    float:right !important;
-  }
-
-  .outerJigsawDiv
-  {
-    margin-top: 60px;
-  }
-  .jigsawHeaderRow
-  {
-        margin-top: 51px;
-        background-color:lightcoral;
+    background-color: aliceblue
   }
   #collage
   {
-    margin-top: 52px;
+    background-color: aliceblue;
   }
+  .jigsawHeaderRow{
+    margin-top: 51px;
+    background-color: goldenrod;
+
+  }
+
+ 
   #collage #sortable {
     list-style-type: none;
     display: inline-block;
     padding: 0;
    
-}
-hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid rosybrown;
 }
 .footer
 {
@@ -47,7 +29,8 @@ hr{
     width: 100%;
     text-align: center;
 }
- #collage #sortable li {
+
+    #collage #sortable li {
         background-size: 400% 400%;
         border: none;
         cursor: pointer;
@@ -66,7 +49,10 @@ hr{
       
         
        }
-       
+       .btn-replay
+       {
+        width:60%;
+       }
 
  }
 
@@ -74,27 +60,27 @@ hr{
        
        .outerJigsawDiv
        {
-         width:320px;
-        height: 320px;
+          width: 291px;
+          height: 291px;
+          margin-top: 80px;
        
        
        }
-       
+       .btn-replay
+       {
+        width:60%;
+       }
+
  }
 @media only screen and (min-width :770px) {
        
        .outerJigsawDiv
        {
-         width:350px;
-        height:350px;
+         width:435px;
+        height:435px;
        
        
        }
-       canvas{
-          width:1000px;
-          height:1000px;
-       }
-       
 
  }
 
