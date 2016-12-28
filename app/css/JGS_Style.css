@@ -6,6 +6,13 @@
   {
     background-color: aliceblue;
   }
+  .jigsawHeaderRow{
+    margin-top: 51px;
+    background-color: goldenrod;
+
+  }
+
+ 
   #collage #sortable {
     list-style-type: none;
     display: inline-block;
@@ -42,6 +49,10 @@
       
         
        }
+       .btn-replay
+       {
+        width:60%;
+       }
 
  }
 
@@ -49,10 +60,15 @@
        
        .outerJigsawDiv
        {
-         width: 291px;
-        height: 291px;
+          width: 291px;
+          height: 291px;
+          margin-top: 80px;
        
        
+       }
+       .btn-replay
+       {
+        width:60%;
        }
 
  }
