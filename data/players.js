@@ -54,6 +54,13 @@ var players = {
             photo : "data/images/dAcers/Jorgensen-3.png",
             team: "Delhi Acers"
       },
+      
+      "jorgensen4" : {
+            id : "jorgensen4",
+            name : "Jan O Jorgensen",
+            photo : "data/images/dAcers/Jorgensen-4.jpg",
+            team: "Delhi Acers"
+      },
 
       "jwala" : {
             id : "jwala",
