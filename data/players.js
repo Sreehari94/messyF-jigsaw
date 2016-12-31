@@ -1,4 +1,11 @@
 var players = {
+	"Aakarshi" : {
+            id : "Aakarshi",
+            name : "Aakarshi Kashyap",
+            photo : "Aakarshi.png",
+            team: "Delhi Acers"
+      },
+
       "akshay" : {
             id : "akshay",
             name : "Akshay Dewalkar",
@@ -54,7 +61,7 @@ var players = {
             photo : "data/images/dAcers/Jorgensen-3.png",
             team: "Delhi Acers"
       },
-      
+
       "jorgensen4" : {
             id : "jorgensen4",
             name : "Jan O Jorgensen",
