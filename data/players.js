@@ -1,6 +1,6 @@
 var players = {
-	"Aakarshi" : {
-            id : "Aakarshi",
+	"aakarshi" : {
+            id : "aakarshi",
             name : "Aakarshi Kashyap",
             photo : "Aakarshi.png",
             team: "Delhi Acers"
