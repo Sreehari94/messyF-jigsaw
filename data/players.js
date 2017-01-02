@@ -158,5 +158,12 @@ var players = {
             name : "Vladimir Ivanov",
             photo : "data/images/dAcers/sozonov-2.jpg",
             team: "Delhi Acers"
+      },
+
+      "vlad" : {
+            id : "vlad",
+            name : "Vladimir Ivanov",
+            photo : "Vladimir_Ivanov.png",
+            team: "Delhi Acers"
       }
 };
